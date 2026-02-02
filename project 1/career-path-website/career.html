@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Explorer</title>
+  <link rel="stylesheet" href="career.css">
+</head>
+<body>
+
+  <h1>🎯 Career Explorer</h1>
+
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Search career..." 
+    onkeyup="searchCareer()"
+  >
+
+  <div id="careerCards" class="career-container"></div>
+
+  <div id="careerDetails" class="details-box">
+    <p>Select a career to see details 👆</p>
+  </div>
+
+  <script src="career.js"></script>
+  <!-- Doraemon Floating Assistant -->
+<div id="doraemon">
+  <img src="assets/doraemon.png" alt="Doraemon">
+</div>
+
+<div id="doraemon-msg">
+  👆 Click career cards to know the roadmap
+</div>
+
+</body>
+</html>

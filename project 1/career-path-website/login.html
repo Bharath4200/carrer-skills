@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CareerPath – Login</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="login-bg"></div>
+
+  <!-- LOGIN CARD -->
+  <div class="login-container">
+    <h2>Welcome Back 👋</h2>
+    <p>Login to explore career paths</p>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <span class="hint">
+      Demo Login → Username: <b>newuser</b> | Password: <b>1234</b>
+    </span>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // demo credentials
+      const demoUser = "newuser";
+      const demoPass = "1234";
+
+      if (!username || !password) {
+        alert("Please enter username and password");
+        return;
+      }
+
+      if (username === demoUser && password === demoPass) {
+        alert("Login successful ✅");
+        window.location.href = "index.html";
+      } else {
+        alert("Wrong username or password ❌");
+      }
+    }
+  </script>
+
+</body>
+</html>

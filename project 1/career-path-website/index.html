@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CareerPath – Home</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Animated Background -->
+<div class="bg-blobs">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Career<span>Path</span></div>
+    <div class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="career.html">Careers</a>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+  <a href="#" onclick="openAbout()">About</a>
+</div>
+<div class="user-name" id="userName"></div>
+
+
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Choose the Right Career Path</h1>
+    <p>
+      Explore in-demand careers, clear roadmaps, required skills  
+      and time needed to achieve your goals.
+    </p>
+
+    <button onclick="window.location.href='career.html'">
+      Explore Careers →
+    </button>
+    <div class="nobita-box">
+  <img src="assets/nobita.png" alt="Nobita thinking about career">
+
+  <div class="speech-bubble">
+    Which career should I choose?
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <h2>How to Use CareerPath</h2>
+
+    <div class="steps">
+      <div class="step">
+        <span>1</span>
+        <h3>Explore Careers</h3>
+        <p>Browse or search careers that match your interest.</p>
+      </div>
+
+      <div class="step">
+        <span>2</span>
+        <h3>View Roadmap</h3>
+        <p>See skills, learning path, and time required.</p>
+      </div>
+
+      <div class="step">
+        <span>3</span>
+        <h3>Start Learning</h3>
+        <p>Follow the roadmap and track your progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="info">
+    <div class="info-box">
+      <h3>🔍 Explore</h3>
+      <p>Search careers that are in demand</p>
+    </div>
+
+    <div class="info-box">
+      <h3>🗺 Roadmaps</h3>
+      <p>Clear step-by-step learning paths</p>
+    </div>
+  </section>
+  <section class="help">
+  <h2>Need Help Choosing a Career?</h2>
+  <p>
+    Not sure which career fits you?  
+    Get guidance based on your interests, skills, and goals.
+  </p>
+
+  <button onclick="window.location.href='career.html'">
+    Get Career Guidance →
+  </button>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>CareerPath</h3>
+      <p>Your guide to skills, roadmaps & career clarity.</p>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="career.html">Careers</a>
+      </div>
+
+      <p class="copyright">
+        © 2026 CareerPath. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- ABOUT POPUP -->
+<div id="aboutModal" class="about-modal">
+  <div class="about-box">
+    <span class="close" onclick="closeAbout()">×</span>
+
+    <h2>About CareerPath</h2>
+
+    <p>
+      CareerPath is created to help students and beginners
+      choose the right career with clarity.
+    </p>
+
+    <p>
+      This platform provides career roadmaps, required skills,
+      and realistic time estimates to reach your goals.
+    </p>
+
+    <p class="creator">
+      👨‍💻 Created by <strong>Bharath</strong>
+    </p>
+  </div>
+</div>
+<script>
+  function openAbout() {
+    document.getElementById("aboutModal").style.display = "flex";
+  }
+
+  function closeAbout() {
+    document.getElementById("aboutModal").style.display = "none";
+  }
+</script>
+<script>
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("userName").innerText = "👋 Hi, " + username;
+  }
+</script>
+<script>
+  function logout() {
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    window.location.href = "login.html";
+  }
+</script>
+
+
+
+
+</body>
+</html>

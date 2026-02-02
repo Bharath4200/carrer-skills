@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Soft blur overlay */
+.login-bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0,229,255,0.25), transparent 50%),
+              radial-gradient(circle at bottom right, rgba(255,0,150,0.25), transparent 50%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+/* LOGIN CARD */
+.login-container {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 40px 35px;
+  width: 360px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.login-container h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.login-container p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 25px;
+}
+
+/* INPUTS */
+.login-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #00e5ff;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #00bcd4;
+  transform: translateY(-2px);
+}
+
+/* HINT */
+.hint {
+  display: block;
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+.switch {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
